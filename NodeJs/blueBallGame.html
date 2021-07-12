@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Ball Game</title>
+    <style>
+        #btnList button {
+            border-radius: 50%;
+            padding: 10px;
+            margin: 2px 2px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="myDiv" id="rules">
+        <h1>Blue Ball Game Rules</h1>
+        <p>The goal is to identify blue ball</p>
+        <p>Choose any button randomly</p>
+        <p>If you select button and button appears blue then you win</p>
+        <p>If you select button and button appears green then it indicates blue button on left side</p>
+        <p>If you select button and button appears red then it indicates blue button on right side</p>
+    </div>
+    <button id="start">
+        Start
+    </button>
+    <div id="btnList"></div>
+    <h1 id="result"></h1>
+</body>
+<script src="blueBallGame.js">
+</script>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timeout</title>
+</head>
+
+<body>
+    <button id="start">Start</button>
+    <h1 id="name">Gayatri</h1>
+    <button id="stop">Stop</button>
+
+    <script>
+        var id = 0;
+
+        function printMsg() {
+            document.getElementById("name").innerHTML = "5 sec passed"
+        }
+
+        function start() {
+            id = setTimeout(printMsg, 5000);
+        }
+
+        function stop() {
+            window.clearTimeout(id);
+        }
+
+        function execute() {
+            btnId = event.target.id;
+            if (btnId == "start") {
+                start();
+                return;
+            }
+            stop();
+        }
+
+        document.getElementById("start").addEventListener("click", execute);
+        document.getElementById("stop").addEventListener("click", execute);
+    </script>
+</body>
+
+</html>

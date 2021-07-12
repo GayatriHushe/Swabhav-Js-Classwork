@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Paper</title>
+    <style>
+        #btnList button {
+            border-radius: 50%;
+            padding: 10px;
+            margin: 2px 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="myDiv" id="rules">
+        <h1>Question Paper</h1>
+        <ul>
+            <li>Question paper consist of 5 questions</li>
+            <li>Each question carries 2 marks</li>
+            <li>All questions are compulsory</li>
+        </ul>
+    </div>
+    <button id="start">Start</button>
+
+    <p type="text" id="question" name="question">Question no 1</p>
+    <form>
+        <input type="radio" id="value1" name="value" value="value1">
+        <label id="label1">Option1</label><br>
+        <input type="radio" id="value2" name="value" value="value2">
+        <label id="label2">Option2</label><br>
+        <input type="radio" id="value3" name="value" value="value3">
+        <label id="label3">Option3</label><br>
+        <input type="radio" id="value4" name="value" value="value4">
+        <label id="label4">Option4</label><br><br>
+
+    </form>
+    <button id="next">Next</button>
+    <h1 id="result"></h1>
+    <button id="reload">Start again</button>
+    <script src="questionPaper.js"></script>
+</body>
+
+
+</html>

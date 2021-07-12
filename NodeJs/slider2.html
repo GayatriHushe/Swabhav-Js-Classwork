@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+
+</head>
+
+<body>
+    <h1>Slider</h1>
+    <div class="slidecontainer">
+        <input type="range" value="1" min="1" max="100" class="slider" id="mySlider">
+        <p>Value : <span id="slideValue"></span></p>
+        <p id="btnList"></p>
+    </div>
+
+    <script>
+        let slider = document.getElementById("mySlider");
+        let output = document.getElementById("slideValue");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+            //console.log(output)
+
+            for (let index = 1; index <= slider.value; index++) {
+
+                var btn = document.createElement('button');
+                btn.innerHTML = index;
+                btn.type = "button";
+            }
+            var btns = document.getElementById('btnList');
+            btns.appendChild(btn);
+
+        }
+    </script>
+</body>
+
+</html>

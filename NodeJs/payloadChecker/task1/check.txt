@@ -1,0 +1,3 @@
+inspect 
+go to network
+under name -> query string parameter

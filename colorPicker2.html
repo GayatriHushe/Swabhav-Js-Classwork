@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+
+<script>
+    function myFunction() {
+        document.body.style.background = document.getElementById("color").value;
+    }
+</script>
+
+<body>
+    <div>
+        <label>Enter your color : </label>
+        <select name="color" id="color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="cyan">Cyan</option>
+          </select>
+    </div>
+
+    <button type="button" onclick="myFunction()">OK</button>
+</body>
+
+</html>

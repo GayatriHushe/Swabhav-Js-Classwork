@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Api 1</title>
+</head>
+
+<body>
+
+    <label>Enter a Number : </label>
+    <input type="number" id="myNumber"><br>
+    <button onclick="getXhrResponse()">Get Facts</button>
+    <p id="text"></p>
+    <script>
+        function getXhrResponse() {
+            console.log("start")
+            var num = document.getElementById("myNumber").value;
+            var xhr = new XMLHttpRequest()
+            xhr.addEventListener("load", function() {
+                console.log(xhr.responseText)
+                var output = xhr.responseText;
+                document.getElementById("text").innerHTML = output;
+            })
+            xhr.open("GET", "http://numbersapi.com/" + num)
+            xhr.send();
+            console.log("end")
+        }
+    </script>
+
+</body>
+
+</html>

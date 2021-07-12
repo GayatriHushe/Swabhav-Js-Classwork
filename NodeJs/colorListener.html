@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Listener</title>
+</head>
+
+<body>
+
+
+    <button id="redBtn">Red</button>
+    <button id="blueBtn">Blue</button>
+
+    <script>
+        function setRed() {
+            document.body.style.backgroundColor = "red";
+        }
+
+        function setBlue() {
+            document.body.style.backgroundColor = "blue";
+        }
+
+        function changeColorHandler() {
+            btnId = event.target.id;
+            if (btnId == "redBtn") {
+                setRed();
+                return;
+            }
+            setBlue();
+
+        }
+
+        document.getElementById("redBtn").addEventListener("click", changeColorHandler);
+        document.getElementById("blueBtn").addEventListener("click", changeColorHandler);
+    </script>
+</body>
+
+</html>
